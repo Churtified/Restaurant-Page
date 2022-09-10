@@ -1,3 +1,5 @@
+const content = document.querySelector("#content");
+
 const menuItems = [
     {
         name: "Pad Thai",
@@ -15,3 +17,41 @@ const menuItems = [
         price: "$15",
     },
 ];
+
+const renderMenu = function() {
+    const main = document.createElement("main");
+    main.classList.add("main");
+
+    const menuTitle = document.createElement("h1");
+    menuTitle.classList.add("menuTitle");
+    
+    const itemContainer = document.createElement("div");
+    itemContainer.classList.add("itemContainer");
+
+    menuItems.forEach((item) => {
+        const name = document.createElement("h2");
+        name.textContent = item.name;
+
+        const description = document.createElement("p");
+        description.textContent = item.description;
+
+        const price = document.createElement("h3");
+        price.textContent = item.price;
+
+        name.classList.add("menu");
+        description.classList.add("menu");
+        price.classList.add("menu");
+
+        itemContainer.appendChild(name);
+        itemContainer.appendChild(description);
+        itemContainer.appendChild(price);
+        
+        main.appendChild(itemContainer);
+    })
+
+    content.appendChild(main);
+}
+
+export {
+    renderMenu,
+}

@@ -1,6 +1,8 @@
 import './styles/styles.css';
 import { renderHome } from "./homepage.js";
-import { renderNav } from "./navbar.js"
+import { renderNav } from "./navbar.js";
+import { renderMenu } from "./menu.js";
+import { renderContact } from "./contact.js";
 
 console.log("working!!");
 
@@ -8,3 +10,5 @@ console.log("working!!");
 
 renderHome();
 renderNav();
+renderMenu();
+renderContact();
