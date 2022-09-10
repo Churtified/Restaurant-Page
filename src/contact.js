@@ -5,11 +5,11 @@ const renderContact = function() {
     main.classList.add('main');
 
     const title = document.createElement('h2');
-    title.classList.add('contact');
+    title.classList.add('contactTitle');
     title.textContent = "Contact Us";
 
     const info = document.createElement('p');
-    info.classList.add('contact');
+    info.classList.add('contactInfo');
     info.textContent = "Whether you’ve made an booking and have questions about that booking, have questions about reservations or you simply have a general inquiry into our restaurant please contact us via info@nangkwokfakery.co"
 
     main.appendChild(title);

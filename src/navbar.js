@@ -1,8 +1,15 @@
+import { renderHome } from "./homepage.js";
+
 const renderNav = function() {
     const content = document.querySelector("#content");
+    const headerContainer = document.querySelector(".headerContainer");
 
     const navContainer = document.createElement("nav");
+    navContainer.classList.add("navContainer");
+
     const navList = document.createElement("ul");
+    navList.classList.add("navList");
+
     const navHome = document.createElement("li");
     const navMenu = document.createElement("li");
     const navContact = document.createElement("li");
@@ -15,7 +22,7 @@ const renderNav = function() {
     navMenu.textContent = "Menu";
     navContact.textContent = "Contact";
 
-    content.appendChild(navContainer);
+    headerContainer.appendChild(navContainer);
     navContainer.appendChild(navList);
     navList.appendChild(navHome);
     navList.appendChild(navMenu);
