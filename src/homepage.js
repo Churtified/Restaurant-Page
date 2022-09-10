@@ -1,5 +1,10 @@
+import { renderNav } from "./navbar.js";
+
 const renderHome = function() {
     const content = document.querySelector('#content');
+
+    const headerContainer = document.createElement("div");
+    headerContainer.classList.add("headerContainer");
 
     const title = document.createElement("h1");
     title.classList.add('title');
@@ -9,10 +14,11 @@ const renderHome = function() {
     copy.classList.add('copy');
     copy.textContent = "inspired by traditional thai street foods";
 
-    content.appendChild(title);
+    content.appendChild(headerContainer);
     content.appendChild(copy);
+    headerContainer.appendChild(title);
 
-    console.log("test");
+    renderNav();
 }
 
 export {

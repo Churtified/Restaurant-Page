@@ -21,10 +21,23 @@
     background-size: cover;
 }
 
+.main {
+    background: grey;
+    height: 100%;
+    max-height: calc(100% - 188px);
+}
+
 .menu {
     color:#fff;
 }
 
 .navItems {
+    color: #fff;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-evenly;
+}
+
+.contact {
     color: #fff;
 }
